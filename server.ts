@@ -43,7 +43,7 @@ export function app(): express.Express {
     res.json(products)
   });
 
-  server.get('/api/products:id', (req, res) => {
+  server.get('/api/products/:id', (req, res) => {
     let products: Product[] = [
       {
         id: "123",
@@ -58,8 +58,8 @@ export function app(): express.Express {
         price: 99
       }
     ]
-    let id = req.params.id;
-    res.json(products.find(p => p.id === id))
+    let id = req.params['id'];
+    res.json(products.find((p: Product) => p.id == id))
   });
 
   server.get('*.*', express.static(distFolder, {

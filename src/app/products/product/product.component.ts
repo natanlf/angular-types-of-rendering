@@ -15,7 +15,7 @@ export class ProductComponent implements OnInit {
   public product!: Product;
 
   ngOnInit(): void {
-    //this.getIdParamAndGetProduct();
+    this.getIdParamAndGetProduct();
   }
 
   getIdParamAndGetProduct(): void {

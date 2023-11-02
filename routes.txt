@@ -1,0 +1,2 @@
+/products/123
+/products/124
